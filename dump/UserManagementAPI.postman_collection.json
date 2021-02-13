@@ -1,0 +1,209 @@
+{
+	"id": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+	"name": "UserManagementAPI",
+	"description": "",
+	"order": [
+		"b705599e-df00-137e-f9f8-c76bffe2c5ab",
+		"557e7710-8b4f-0341-bf7d-2cdbcf76617e",
+		"95a5e94b-6fa4-b679-5613-d304bb789baa",
+		"02f66069-3380-901c-ebdc-2a31b5094b1a",
+		"cc0fb4e3-da2e-85ca-7933-089c6f439dcd",
+		"e90009a3-8765-87c3-8945-61f1185ecf03"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1613190908788,
+	"owner": "1616647",
+	"public": false,
+	"requests": [
+		{
+			"id": "02f66069-3380-901c-ebdc-2a31b5094b1a",
+			"headers": "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/users/9",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get User With Id",
+			"description": "We need to request with existed user id, with token in the headers",
+			"descriptionFormat": "html",
+			"time": 1613191109513,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "557e7710-8b4f-0341-bf7d-2cdbcf76617e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Login User",
+			"description": "Provide email and password in the body, Response will be jwt token for the user. So the next subsequent request will attach the token in the header",
+			"descriptionFormat": "html",
+			"time": 1613190992109,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"email\": \"hari.ranga10@gmail.com\",\n\t\"password\": \"hola123\"\n}"
+		},
+		{
+			"id": "95a5e94b-6fa4-b679-5613-d304bb789baa",
+			"headers": "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/users",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": null,
+			"dataMode": "params",
+			"name": "GetAllUsersWithPagination",
+			"description": "Provide token in the header, key should be 'authorization' and value 'Bearer jwt_token'",
+			"descriptionFormat": "html",
+			"time": 1613191073305,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b705599e-df00-137e-f9f8-c76bffe2c5ab",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/register",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Register User",
+			"description": "provide email and password in the body",
+			"descriptionFormat": "html",
+			"time": 1613190915022,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"email\": \"hari.ranga10@gmail.com\",\n\t\"password\": \"hola123\"\n}"
+		},
+		{
+			"id": "cc0fb4e3-da2e-85ca-7933-089c6f439dcd",
+			"headers": "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/users/8",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete User With Id",
+			"description": "We need to send id in the params and token should be there in the headers",
+			"descriptionFormat": "html",
+			"time": 1613191185581,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "e90009a3-8765-87c3-8945-61f1185ecf03",
+			"headers": "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDI2YWUyODgxNGViYzBlOTQ3NzE1YzkiLCJpYXQiOjE2MTMxNDc3MTUsImV4cCI6MTYxNTczOTcxNX0.b-7xGxCIesSrRClboBZrm-1QmOQG0fpo8gP6Do2RBXI",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:8000/api/v1/users",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6bd20e2c-6eb6-eaeb-58c2-da5392abf5a8",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Add User",
+			"description": "To add a new user, Need to provide email and password in the body. Headers should have token",
+			"descriptionFormat": "html",
+			"time": 1613191237369,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"email\": \"hari.ranga120@gmail.com\",\n\t\"password\": \"hola123\"\n}"
+		}
+	]
+}

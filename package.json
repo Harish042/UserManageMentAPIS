@@ -1,0 +1,24 @@
+{
+  "name": "usermanagementcodingexercise",
+  "version": "1.0.0",
+  "description": "User management app for coding test",
+  "main": "Server.js",
+  "scripts": {
+    "test": "mocha test/users.js"
+  },
+  "author": "Harish",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.3.0",
+    "chai-http": "^4.3.0",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.0",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0"
+  }
+}
